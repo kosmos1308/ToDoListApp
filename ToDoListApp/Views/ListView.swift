@@ -29,7 +29,7 @@ struct ListView: View {
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink("Add") {
-                    EmptyView()
+                    AddView()
                 }
             }
         }
