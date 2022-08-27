@@ -18,6 +18,7 @@ struct ToDoListAppApp: App {
                 ListView()
             }
             .environmentObject(listViewModel)
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

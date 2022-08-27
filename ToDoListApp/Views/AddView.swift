@@ -23,7 +23,7 @@ struct AddView: View {
                     .padding(.horizontal)
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)
-                    .background(Color("Mercury"))
+                    .background(Color(uiColor: .secondarySystemBackground))
                     .cornerRadius(10)
                 
                 Button {
@@ -72,8 +72,16 @@ struct AddView: View {
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            AddView()
+        Group {
+            NavigationView {
+                AddView()
+            }
+            .preferredColorScheme(.dark)
+            
+            NavigationView {
+                AddView()
+            }
+            .preferredColorScheme(.light)
         }
     }
 }
